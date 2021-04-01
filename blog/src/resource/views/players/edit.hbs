@@ -1,0 +1,24 @@
+<div class="mt-4">
+    <h3>Update player</h3>
+
+        <form class="mt-4" method="POST" action="/players/{{author._id}}?_method=PUT">
+            <div class="form-group">
+                <label for="description">Description player</label></br>
+                <input type="text" value="{{author.description}}" id="description" name="description">
+            </div>
+            <div class="form-group">
+                <label for="description">Title</label></br>
+                <input type="text" value="{{author.title}}" id="title" name="title">
+            </div>
+            <div class="form-group">
+                <label for="image">Image</label></br>
+                <input type="text" value="{{author.image}}" id="imgae" name="image">
+            </div>
+            <div class="form-group">
+                <label for="videoId">Video Id</label></br>
+                <input type="text" value="{{author.videoId}}" id="videoId" name="videoId">
+            </div>
+            <button type="submit" class="btn btn-primary">Saved</button>
+        </form>
+
+</div>

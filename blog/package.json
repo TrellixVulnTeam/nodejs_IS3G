@@ -1,0 +1,41 @@
+{
+    "name": "blog",
+    "version": "1.0.0",
+    "description": "the first blog create by me",
+    "main": "src/index.js",
+    "scripts": {
+        "beatiful": "prettier --single-quote --tab-width 4 --trailing-comma all --write 'src/**/*.{js,json,scss}'",
+        "start": "nodemon --inspect src/index.js",
+        "watch": "node-sass --watch src/resource/scss/ --output src/public/css/",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Linhnef/nodejs_firstBlog.git"
+    },
+    "keywords": [
+        "nodejs"
+    ],
+    "author": "Thu La",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Linhnef/nodejs_firstBlog/issues"
+    },
+    "homepage": "https://github.com/Linhnef/nodejs_firstBlog#readme",
+    "dependencies": {
+        "method-override": "^3.0.0",
+        "mongoose": "^5.11.15",
+        "mongoose-delete": "^0.5.3",
+        "mongoose-slug-generator": "^1.0.4"
+    },
+    "devDependencies": {
+        "express": "^4.17.1",
+        "express-handlebars": "^5.2.0",
+        "husky": "^5.0.9",
+        "lint-staged": "^10.5.4",
+        "morgan": "^1.10.0",
+        "node-sass": "^5.0.0",
+        "nodemon": "^2.0.7",
+        "prettier": "^2.2.1"
+    }
+}

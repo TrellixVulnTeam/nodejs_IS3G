@@ -1,11 +1,13 @@
 const express = require('express');
 const router = express.Router();
 
-const SiteController = require('../app/controllers/productController');
+const productController = require('../app/controllers/productController');
 
-router.get('/', SiteController.defaultActive);
-router.get('/:code/detail', SiteController.detail);
-
+router.get('/', productController.defaultActive);
+router.get('/:brand', productController.getBrand);
+router.get('/cart/watch', productController.cart);
+router.get('/:code/detail', productController.detail);
+router.get('/:code/addToCart', productController.addToCart);
 
 
 module.exports = router;

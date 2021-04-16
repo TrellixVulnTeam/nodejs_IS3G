@@ -7,8 +7,18 @@ const port = 3000;
 const db = require('./config/db');
 const route = require('./routes');
 const methodOverride = require('method-override');
+var session = require('express-session');
+const cookieParser = require('cookie-parser')
 
 
+
+// session cookie
+app.use(session({
+    secret: 'mySession',
+    resave: true,
+    saveUninitialized: true,
+}));
+app.use(cookieParser());
 
 //method override
 app.use(methodOverride('_method'));

@@ -10,6 +10,14 @@ const productSchema = mongoose.Schema({
         type: String,
         required: true
     },
+    name: {
+        type: String,
+        require: true,
+    },
+    brand: {
+        type: String,
+        require: true,
+    },
     description: {
         type: String,
         require: true,
@@ -18,12 +26,16 @@ const productSchema = mongoose.Schema({
         type: String,
         require: true,
     },
+    evaluate: {
+        type: String,
+        require: true,
+    },
     rate: {
-        type: Float32Array,
+        type: String,
         require: true,
     },
     price: {
-        type: Float64Array,
+        type: String,
         require: true,
     },
     picture: {

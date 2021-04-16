@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+@import url("../../../node_modules/font-awesome/css/font-awesome.min.css");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900|Rubik:300,400,500,700,900");
 html,
 body {
@@ -245,6 +246,9 @@ hr .light {
     margin-bottom: 11px; }
   .order_info {
     margin-top: 18px; }
+  .product {
+    height: 100%;
+    width: 100%; }
   .shop-button {
     height: 47px; }
   .product_fav i {
@@ -276,6 +280,9 @@ hr .light {
     padding-left: 0px; }
   .break-all {
     color: #5e5e5e; }
+  .product-frame {
+    margin: 20px;
+    bottom: 20px; }
   .image_selected {
     display: -webkit-box;
     display: -moz-box;
@@ -554,4 +561,52 @@ hr .light {
     clear: both;
     position: relative;
     height: 40px;
-    margin-top: -40px; } }
+    margin-top: -40px; }
+  /*about us*/
+  .social-link {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    border-radius: 50%;
+    transition: all 0.3s;
+    font-size: 0.9rem; }
+  .social-link:hover,
+  .social-link:focus {
+    background: #ddd;
+    text-decoration: none;
+    color: #555; }
+  /*support*/
+  body {
+    background-color: #25274d; }
+  .contact {
+    padding: 4%;
+    height: 400px; }
+  .col-md-3 {
+    background: #ff9b00;
+    padding: 4%;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem; }
+  .contact-info {
+    margin-top: 10%; }
+  .contact-info img {
+    margin-bottom: 15%; }
+  .contact-info h2 {
+    margin-bottom: 10%; }
+  .col-md-9 {
+    background: #fff;
+    padding: 3%;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem; }
+  .contact-form label {
+    font-weight: 600; }
+  .contact-form button {
+    background: #25274d;
+    color: #fff;
+    font-weight: 600;
+    width: 25%; }
+  .contact-form button:focus {
+    box-shadow: none; } }

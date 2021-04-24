@@ -3,8 +3,8 @@ var sess;
 class siteController {
     // [GET] /news
     home(req, res, next) {
-        var sessData = req.session;
-        sessData.cart = [""];
+        /*  var sessData = req.session;
+         sessData.someAttribute = []; */
         res.render('home');
     }
 

@@ -13,12 +13,20 @@ const cookieParser = require('cookie-parser')
 
 
 // session cookie
-app.use(session({
-    secret: 'mySession',
-    resave: true,
-    saveUninitialized: true,
-}));
 app.use(cookieParser());
+app.use(function(req, res, next) {
+    // check if client sent cookie
+    if (req.cookies.cart === undefined) {
+        // no: set a new cookie
+        var str = "";
+        res.cookie("cart", str);
+        console.log('cookie created successfully');
+    } else {
+        // yes, cookie was already present 
+        console.log('cookie exists', req.cookies.cart);
+    }
+    next(); // <-- important!
+});
 
 //method override
 app.use(methodOverride('_method'));

@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <title>Mẹo tính căn</title>
+</head>
+<script type="text/javascript">
+    function myFunction() {
+        var rs = [];
+        var value = prompt("Input value :", '9025');
+        for (let i = 100; i <= 100000; i++) {
+            var tmp = i.toString();
+            var num = parseInt(tmp.charAt(0) + tmp.charAt(tmp.length - 1));
+
+            for (let j = 1; j <= 10; j++) {
+                if (Math.pow(num, j) == parseInt(i)) {
+                    rs.push(i);
+                }
+            }
+        }
+        for (let i = 0; i < rs.length; i++) {
+            if (parseInt(rs[i]) == parseInt(value)) {
+                console.log(rs[i]);
+                break;
+            }
+        }
+    }
+</script>
+
+<body>
+    <button onclick="myFunction()">Input</button>
+</body>
+
+</html>

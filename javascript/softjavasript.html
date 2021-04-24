@@ -1,0 +1,95 @@
+<html>
+
+<head>
+    <title>Soft</title>
+</head>
+<script type="text/javascript">
+    var array = new array();
+
+    function rangeArr(arr, n) {
+        for (let i = 0; i < n; i++) {
+            arr[i] = Math.floor(Math.random() * 10);
+        }
+        return arr;
+    }
+
+    function swap(a, b) {
+        var tmp = a;
+        a = b;
+        b = tmp;
+    }
+
+    function compare(a, b) {
+        if (a <= b) {
+            return 1;
+        } else {
+            return -1;
+        }
+    }
+
+    function quickSoft(arr) {
+        for (var i = 0; i < arr.length - 1; i++) {
+            for (var j = 0; j < arr.length - 1; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    swap(arr[j], arr[j + 1]);
+                }
+            }
+        }
+    }
+
+
+    function normalSearch(arr, n) {
+        var len = arr.length;
+        for (var i = 0; i < len - 1; i++) {
+            if (arr[i] == n) {
+                console.log(arr[i]);
+                break;
+            }
+        }
+    }
+
+    function binarySearch(arr, l, r, n) {
+        if (r >= l) {
+            var mid = l + (r - 1) / 2;
+            if (arr[mid] == x) {
+                return arr[mid];
+            }
+            if (arr[mid] > x) {
+                return binarySearch(arr, l.mid - 1, n);
+            }
+
+            return binarySearch(arr, mid + 1, r, n);
+        }
+        return -1;
+    }
+</script>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+    const binarySearch = (list, item) => {
+        let low = 0
+        let high = list.length - 1
+
+        while (low <= high) {
+            const mid = Math.floor((low + high) / 2)
+            const guess = list[mid]
+
+            if (guess === item) {
+                return mid
+            }
+
+            if (guess > item) {
+                high = mid - 1
+            } else {
+                low = mid + 1
+            }
+        }
+
+        return null //if not found
+    }
+</script>

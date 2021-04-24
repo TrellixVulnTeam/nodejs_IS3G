@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My profile</title>
+    <!--inport Boostrp css js font awwesome here-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!--first i have navigation component to contain link, infor to orther conponent.-->
+    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+        <div class="container-fluid">
+            <!--container-fluid : chiem toan bo chieu ngang-->
+            <!--navbar navbar-expend-md navbar-light bg-light sticky-top
+            navbar-expend-md : tu dong expend ra voi kich thuoc medium
+            navbar-light, bg-light mau sac : mau sang
+            sticky-top : dinh chat o tren dinh trang web
+        -->
+            <!--navigation = website's header-->
+            <a class="navbar-branch" href="#">
+                <!--navbar-branch thuong hieu, logo chua ban-->
+                <img src="./images/icons8-dog-walking-100.png" height="50">
+            </a>
+            <!--toggler : bam 1 lan hien ra the bam lan nua bien mat
+                collapse : the bien mat giong nhu kieu keo rem rut len rut xuong
+        -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+            <!-- list menu khi click vao button  co kieu la collapse va link voi nhau qua 
+                id navbarResponsive
+        -->
+
+            <!-- danh sach cac link trong menu navbar-bav de the hien
+                ben trong la cac <li> item tro den trang mong muon.
+        -->
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Introduced</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Languge</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Experiences</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Project</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Thanks</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Carousel : bang chuyen (anh duoc luot di luot lai)-->
+    <!-- ben trong co cac anh bao quanh boi mot the <ul> bam vao nhu cac nut se chuyen sang cac trang khac nhau
+     bam vao list item dau tien nhay den phan tu tiep theo    
+-->
+    <div id="slides" class="carousel slide" data-ride="carousel">
+        <ul class="carousel-indicators">
+            <li data-target="#slides" data-slide-to="0"></li>
+            <li data-target="#slides" data-slide-to="1"></li>
+            <li data-target="#slides" data-slide-to="2"></li>
+            <li data-target="#slides" data-slide-to="3"></li>
+        </ul>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./images/carousel0.png">
+                <div class="carousel-caption">
+                    <!--carousel caption : tieu de
+                    btn-outline-light : nut bam khong co hinh nen chi co vien
+                    lg : larg lon
+                -->
+                    <h1 class="display-2">NB linh</h1>
+                    <h3>My Profile Page</h3>
+                    <button type="button" class="btn btn-outline-light btn-lg">
+                    Email
+                </button>
+                    <button type="button" class="btn btn-primary btn-lg">Phone</button>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./images/carousel1.png">
+            </div>
+            <div class="carousel-item">
+                <img src="./images/carousel2.png">
+            </div>
+            <div class="carousel-item">
+                <img src="./images/carousel3.png">
+            </div>
+        </div>
+    </div>
+    <!--jumbotron : the div chuyen de lam thong tin mang tinh makerting quang cao-->
+    <div class="container-fluid">
+        <div class="jumb">
+            <!--
+            xs extra small thiet bij nho gop ca 12 cot thanh 1 
+            large trung binh gop 9 cot thanh 1 cot
+            extra large gop 10 cot thanh 1 cot
+        -->
+            <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10">
+                <p>This page design by boostrap4</p>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-2">
+                <a href="#">
+                    <button type="button" class="btn btn-outline-secondary">Contact me</button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!--lam container fluid cho 2 ben chu se phan bo o giua tat ca cac loai man hinh gop 12 dong lai
+    cac thu nam trong nay tran ra khogn chia cot nua.
+-->
+    <div class="container-fluid padding">
+        <div class="row welcome text-center">
+            <div class="col-12">
+                <h1 class="dislay-4">Welcome !!</h1>
+            </div>
+            <!--Horizontal rule-->
+            <hr>
+            <div class="col-12">
+                <p>Wel come my page with html 5 css 3 and boostrap 4 !!!</p>
+            </div>
+        </div>
+    </div>
+    <!--icoin cua face book-->
+    <div class="container-fluid padding">
+        <div class="row text-center padding">
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <!--icon-->
+                <i class="fab fa-react"></i>
+                <h3>React</h3>
+                <p>the laste version react !!</p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <!--icon-->
+                <i class="fab fa-node-js"></i>
+                <h3>Nodejs</h3>
+                <p>the laste version nodejs !!</p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <!--icon-->
+                <i class="fab fa-css3"></i>
+                <h3>Css</h3>
+                <p>the laste version css !!</p>
+            </div>
+        </div>
+        <hr class="my-4">
+    </div>
+    <!--col md 12 kich thuoc trung binh 12 cot thanh 1 kich thuoc lon 6 cot thanh 1-->
+    <div class="container-fluid padding">
+        <div class="row padding">
+            <div class="col-md-12 col-lg-6">
+                <h2>My profile...</h2>
+                <p>I was born Phu Yen. I'm learing at Bach Khoa Da Nang university in information technology faculty.</p>
+                <p>I used to learn java basic web : java servlet, springboot then i research PHP python ,... but last i choose javascript. i known javascrip throught fullstack.vn</p>
+                <br>
+            </div>
+            <div class="col-lg-6">
+                <img src="images/laptop.jpeg" class="img-fluid">
+                <!-- img-fluid : tu dong dieu chinh anh-->
+            </div>
+        </div>
+    </div>
+    <hr class="my-2">
+    <!--margin top va bottom-->
+    <button class="fun" data-toggle="collapse" data-target="#emoji">
+    <!--collapse : bien mat kieu cuon rem 
+        emoji : thang nao bien mat (id se bien mat)
+    -->
+    CLick for fun
+</button>
+    <div id="emoji" class="collapse">
+        <div class="container-fluid padding">
+            <div class="row text-center">
+                <div class="col-sm-6 col-md-3">
+                    <!--ca man hinh co 2 cot ( gop 6 cot) kich thuoc nho hien duoc 2 cai icoin kich thuoc to hien dc 4 icoin-->
+                    <img class="gif" src="images/dancing-clock-gif-animation.gif" width="100" height="100">
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <!--ca man hinh co 2 cot ( gop 6 cot) kich thuoc nho hien duoc 2 cai icoin kich thuoc to hien dc 4 icoin-->
+                    <img class="gif" src="images/head_arrows_right_animation_clipart.gif" width="100" height="100">
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <!--ca man hinh co 2 cot ( gop 6 cot) kich thuoc nho hien duoc 2 cai icoin kich thuoc to hien dc 4 icoin-->
+                    <img class="gif" src="images/spin_p_alphabet_letter_black_animation_clipart.gif" width="100" height="100">
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <!--ca man hinh co 2 cot ( gop 6 cot) kich thuoc nho hien duoc 2 cai icoin kich thuoc to hien dc 4 icoin-->
+                    <img class="gif" src="images/peacock_feathers_bird_flying_animation_clipart.gif" width="100" height="100">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid padding">
+        <div class="row welcome text-center">
+            <div class="col-12">
+                <h1 class="display-4">Language</h1>
+            </div>
+        </div>
+    </div>
+    <!--card : the cac member 4 cot thanh 1-->
+    <div class="container-fluid padding">
+        <div class="row padding">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <img class="card-img-top" src="images/nguyenduchoang.png">
+                        <h4 class="card-title">Nguyen Duc Hoang</h4>
+                        <p class="card-text">
+                            Nguyen Duc hoang is a fullstack dveloper with 10 years of experiences.
+                        </p>
+                        <a href="#" class="btn btn-outline-secondary">Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <img class="card-img-top" src="images/Natasha.png">
+                        <h4 class="card-title">Nguyen Duc Hoang</h4>
+                        <p class="card-text">
+                            Nguyen Duc hoang is a fullstack dveloper with 10 years of experiences.
+                        </p>
+                        <a href="#" class="btn btn-outline-secondary">Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <img class="card-img-top" src="images/johndoe.png">
+                        <h4 class="card-title">Nguyen Duc Hoang</h4>
+                        <p class="card-text">
+                            Nguyen Duc hoang is a fullstack dveloper with 10 years of experiences.
+                        </p>
+                        <a href="#" class="btn btn-outline-secondary">Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid padding">
+        <div class="row padding">
+            <div class="col-md-12 col-lg-6">
+                <h2>Our vision</h2>
+                <p>All our work is for customer satisdaction with high quality products</p>
+                <p>We make outsourcing all softwares relating to CMS, Database, Education</p>
+                <br>
+            </div>
+            <div class="col-lg-6">
+                <img class="img-fluid" src="images/mission.jpg">
+            </div>
+        </div>
+        <hr class="my-4">
+    </div>
+    <div class="container-fluid padding">
+        <div class="row text-center padding">
+            <div class="col-12">
+                <h2>Contact us</h2>
+            </div>
+            <div class="col-12 social padding">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container-fluid padding">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <img src="images/logo.png">
+                    <hr class="light">
+                    <p>03-358-348-10</p>
+                    <p>Begin270519@gmail.com</p>
+                    <p>166/34 Nguyen Luong Bang street, Hoa Khanh Bac, Lien Chieu, Da Nang, Viet Nam.</p>
+                </div>
+                <div class="col-md-4">
+                    <hr class="light">
+                    <h5>Working hours</h5>
+                    <hr class="light">
+                    <p>Moday-Friday : 8am - 5pm</p>
+                    <p>WWeekend: 8am - 12am</p>
+                </div>
+                <div class="col-md-4">
+                    <hr class="light">
+                    <h5>Services</h5>
+                    <hr class="light">
+                    <p>Outsourcing</p>
+                    <p>Website development</p>
+                    <p>MObile applications</p>
+                </div>
+                <div class="col-12">
+                    <hr class="light-100">
+                    <h5>&copy; Linh</h5>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

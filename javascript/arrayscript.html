@@ -1,0 +1,75 @@
+<script>
+    var arr = [1, 2, 4, 5, 9, 6];
+
+    function printarr() {
+        console.log(arr);
+    }
+    class node {
+        constructor(data) {
+            this.data = data;
+            this.next = null;
+        }
+    }
+    class LinkedList {
+        constructor(head = null) {
+            this.head = head
+        }
+    }
+    let node1 = new node(2);
+    let node2 = new node(4);
+    let node3 = new node(7);
+    node1.next = node2;
+    node2.next = node3;
+
+    let list = new LinkedList(node1)
+        //console.log(list.head.next.data)
+
+    function size() {
+        let count = 0;
+        let node = this.head;
+        while (node) {
+            count++;
+            node = node.next
+        }
+        return count;
+    }
+
+    function clear() {
+        this.head = null;
+    }
+
+    function getLast() {
+        let lastNode = this.head;
+        if (lastNode) {
+            while (lastNode.next) {
+                lastNode = lastNode.next
+            }
+        }
+        return lastNode
+    }
+
+    function getFirst() {
+        return this.head;
+    }
+</script>
+
+<!--Về bản chất, danh sách liên kết có chức năng như một mảng, có thể thêm và xóa các phần tử ở bất kỳ vị trí nào khi cần thiết.
+mà phần tử  vẫn liên kết với nhau thông qua con trỏ next -->
+
+<body>
+    <button type="button" onclick="printarr()">click</button>
+</body>
+
+
+bảo trì, bảo hành.
+
+thuật toán.
+
+môi trường lắp đặt hệ thống.
+
+
+
+
+
+
+

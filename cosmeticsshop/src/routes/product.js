@@ -7,7 +7,6 @@ router.get('/', productController.defaultActive);
 router.get('/:brand', productController.getBrand);
 router.get('/cart/watch', productController.cart);
 router.get('/:code/detail', productController.detail);
-router.get('/:code/addToCart', productController.addToCart);
-
+router.post('/:code/addToCart', productController.addToCart);
 
 module.exports = router;

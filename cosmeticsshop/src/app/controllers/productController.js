@@ -3,11 +3,10 @@ const Products = require("../models/product");
 const { mutipleMongooseToObject } = require('../../utils/mongoose')
 const { mongooseToObject } = require('../../utils/mongoose')
 
-
 class productController {
     // [GET] /brand
     defaultActive(req, res, next) {
-            /* req.session.someAttribute.push("soccer"); */
+
             Products.find({})
                 .then(products => res.render("product/brand", {
                     products: mutipleMongooseToObject(products)
@@ -31,12 +30,30 @@ class productController {
         }
         // [POST] /product/:code/addToCart
     addToCart(req, res, next) {
-            res.redirect('/')
+            var cart = req.cookies.cart;
+            cart += req.params.code + ',';
+            var ele = cart.toString().split(',');
+            res.cookie("cart", cart);
+            res.redirect('/product/cart/watch');
+
         }
         //  [POST] /product/cart
     cart(req, res, next) {
-        res.write(`<h1>Hello ${req.session.someAttribute} </h1><br>`);
-        res.end('<a href=' + '/logout' + '>Logout</a>');
+        var cart = req.cookies.cart;
+        cart += req.params.code + ',';
+        var ele = cart.toString().split(',');
+        ele.pop(ele[ele.length]);
+        console.log(cart);
+        console.log(ele);
+        Products.find({ code: { $in: [JSON.stringify(ele)] } })
+            .then(products => {
+                if (products) {
+                    res.render('cart', {
+                        products: mutipleMongooseToObject(products)
+                    })
+                }
+            });
+
     }
 
 }

@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>Objetive</title>
+    <script type="text/javascript">
+        function changeName(name) {
+            this.name = name;
+        }
+
+        function ob(name, infor) {
+            this.name = name;
+            this.infor = infor;
+            this.changeName = changeName;
+        }
+    </script>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var t = new ob("linh", "hello mn !!!!")
+        document.write(t.name + " : " + t.infor + "</br>");
+        t.changeName("just linh")
+        document.write(t.name + " : " + t.infor);
+    </script>
+
+</body>
+
+</html>

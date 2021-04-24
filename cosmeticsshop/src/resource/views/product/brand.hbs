@@ -12,7 +12,8 @@
 
                         <div class="text-muted small text-uppercase mb-5">
                             <p class="mb-3"><a href="/product/Vichy" class="card-link-secondary">Vichy</a></p>
-                            <p class="mb-3"><a href="/product/the ordenary" class="card-link-secondary">The ordernary</a></p>
+                            <p class="mb-3"><a href="/product/the ordenary" class="card-link-secondary">The
+                                    ordernary</a></p>
                             <p class="mb-3"><a href="/product/Obagi" class="card-link-secondary">Obagi</a></p>
                             <p class="mb-3"><a href="/product/Some by mi" class="card-link-secondary">Some by mi</a></p>
                         </div>
@@ -149,15 +150,18 @@
             {{#each products}}
             <div class="">
                 <div class="card">
-                    <img class="card-img-top"
-                        src="{{this.picture}}"
-                        alt="Card image top">
+                    <img class="card-img-top" src="{{this.picture}}" alt="Card image top">
                     <div class="card-body">
                         <h3 class="card-title">{{this.name}}</h3>
-                        <a href="#" class="card-link">{{this.brand}}</a>   
+                        <a href="#" class="card-link">{{this.brand}}</a>
                         <p class="card-text">{{this.description}}</p>
-                        <a href="/product/{{this.code}}/detail" class="btn btn-primary">Add to cart</a>
+                        <form method="POST" action="/product/{{this.code}}/addToCart">
+                          <input style="display: none;" type="text" id="code" name="code" value="{{this.code}}">
+                        <button type="submit" class="btn btn-primary">Add to cart</button>
+                        </form>
+                        <a href="/product/{{this.code}}/detail" class="btn btn-primary">Buy now</a>
                     </div>
+
                 </div>
             </div>
             {{/each}}

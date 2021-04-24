@@ -609,4 +609,9 @@ hr .light {
     font-weight: 600;
     width: 25%; }
   .contact-form button:focus {
-    box-shadow: none; } }
+    box-shadow: none; }
+  body {
+    background: #eecda3;
+    background: -webkit-linear-gradient(to right, #eecda3, #ef629f);
+    background: linear-gradient(to right, #eecda3, #ef629f);
+    min-height: 100vh; } }
